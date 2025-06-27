@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suzy Nails Designer</title>
+
+  <!-- CSS principal do site -->
+  <link rel="stylesheet" href="estilo.css" />
+
+  <!-- Biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cabeçalho fixo com logo e menu de navegação -->
+  <header>
+    <div><strong>Suzy Nails</strong></div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="Formatos.html">Formatos</a>
+      <a href="dicas.html" class="ativa">Dicas de cuidados</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Título de introdução da página -->
+  <section id="inicio">
+    <h1>Como devo cuidar das minhas unhas após realizar esmaltação em gel?</h1>
+  </section>
+
+  <!-- Seção com imagem lateral + introdução sobre unhas naturais -->
+  <section id="sobre" class="perfil">
+    <div class="perfil-container">
+      <!-- Imagem da seção -->
+      <img src="img/luvas.jpg" alt="Trabalho Suzy" class="imagem-ajustada" />
+      
+      <!-- Texto explicativo ao lado da imagem -->
+      <div class="descricao-suzy">
+        <h2>Unhas Naturais</h2>
+        <p class="identado">
+          Cuidar das unhas naturais é essencial para quem busca manter as mãos bonitas e saudáveis. Unhas bem cuidadas não apenas complementam o visual, mas também refletem a saúde do nosso corpo. Embora possa parecer desafiador ter unhas fortes e saudáveis, com algumas dicas simples e cuidados diários, você pode alcançar resultados incríveis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção principal com abas interativas -->
+  <section class="bloco-abas animar">
+    <h2>Dicas de Cuidados com as Unhas</h2>
+
+    <!-- Botões das abas -->
+    <div class="abas">
+      <button class="aba ativa" data-alvo="#checklist">Checklist</button>
+      <button class="aba" data-alvo="#esmaltecao">Esmaltação em Gel</button>
+      <button class="aba" data-alvo="#alongamento">Alongamento</button>
+    </div>
+
+    <!-- Área com conteúdo e imagem de cada aba -->
+    <div class="conteudo-abas-com-imagem">
+      <div class="texto-abas">
+        
+        <!-- Aba 1: Checklist -->
+        <div class="painel-aba ativa" id="checklist">
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Evite roer ou arrancar cutículas</li>
+            <li><i class="fas fa-check-circle"></i> Use base fortalecedora regularmente</li>
+            <li><i class="fas fa-check-circle"></i> Mantenha as mãos hidratadas</li>
+            <li><i class="fas fa-check-circle"></i> Use luvas ao lidar com produtos de limpeza</li>
+            <li><i class="fas fa-check-circle"></i> Faça manutenção com uma profissional</li>
+          </ul>
+        </div>
+
+        <!-- Aba 2: Esmaltação em Gel -->
+        <div class="painel-aba" id="esmaltecao">
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Não coloque as unhas na boca</li>
+            <li><i class="fas fa-check-circle"></i> Use luvas com produtos químicos ou em serviços pesados</li>
+            <li><i class="fas fa-check-circle"></i> Evite água quente por muito tempo</li>
+            <li><i class="fas fa-check-circle"></i> Retire o esmalte com uma profissional</li>
+            <li><i class="fas fa-check-circle"></i> Faça a manutenção entre 15 a 20 dias</li>
+          </ul>
+        </div>
+
+        <!-- Aba 3: Alongamento -->
+        <div class="painel-aba" id="alongamento">
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Hidrate sempre as cutículas</li>
+            <li><i class="fas fa-check-circle"></i> Não tente remover o alongamento sozinha</li>
+            <li><i class="fas fa-check-circle"></i> Use removedor de esmalte sem acetona</li>
+            <li><i class="fas fa-check-circle"></i> Evite deixar o alongamento submerso na água</li>
+            <li><i class="fas fa-check-circle"></i> Realize a manutenção regularmente</li>
+            <li><i class="fas fa-check-circle"></i> Principalmente: não utilize as unhas para abrir objetos como lata</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Imagens associadas a cada aba -->
+      <div class="imagem-abas">
+        <img src="img/roendo.jpg" alt="Roendo unha" class="imagem-aba ativa" id="img-checklist" />
+        <img src="img/manu.jpg" alt="Esmaltação em gel" class="imagem-aba" id="img-esmaltecao" />
+        <img src="img/lata.jpg" alt="Cuidado com a lata" class="imagem-aba" id="img-alongamento" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário para contato -->
+  <section id="contato">
+    <h2>Formulário de contato</h2>
+    <form class="form-contato" onsubmit="return enviarFormulario()">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </section>
+
+  <!-- Rodapé com informações e redes sociais -->
+  <footer>
+    <p>© 2025 Suzy Nails. Todos os direitos reservados.</p>
+    <div style="margin-top: 10px;">
+      <a href="https://wa.me/5542999772898" target="_blank" class="social-icon">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.instagram.com/suzyaltenrath/" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5542999772898" class="whatsapp-float" target="_blank" title="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Inclusão do script de funcionalidades (abas, scroll, formulário) -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Define codificação e responsividade -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suzy Nails Designer</title>
+
+  <!-- Estilo principal da página -->
+  <link rel="stylesheet" href="estilo.css" />
+
+  <!-- Ícones (ex: WhatsApp, Instagram) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com logo e links de navegação -->
+  <header>
+    <div><strong>Suzy Nails</strong></div>
+    <nav>
+      <!-- Alguns links são âncoras (#) para a mesma página; outros levam para páginas diferentes -->
+      <a href="index.html">Início</a> <!-- ⚠️ Ideal remover o "#" para funcionar corretamente -->
+      <a href="#servicos">Serviços</a>
+      <a href="Formatos.html">Formatos</a>
+      <a href="dicas.html">Dicas de cuidados</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Seção de apresentação principal -->
+  <section id="inicio">
+    <h1>Suzy Nails Designer</h1>
+    <p>Especialista em Esmaltação em gel</p>
+  </section>
+
+  <!-- Bloco com perfil da profissional -->
+  <section id="perfil" class="perfil">
+    <div class="perfil-container">
+      <img src="img/suzy1.jpg" alt="Trabalho Suzy" class="imagem-ajustada" />
+      <div class="descricao-suzy">
+        <h2>Suzy Altenrath</h2>
+        <p class="identado">
+          Com anos de experiência na área de design de unhas, Suzy é especializada em esmaltação em gel e técnicas de beleza que valorizam a autoestima e o bem-estar feminino. Atendimento com amor, cuidado e muito capricho 💅✨
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção com lista de serviços -->
+  <section id="servicos">
+    <div class="bloco-servicos">
+      <h2>Venha descobrir um mundo de cores:</h2>
+      <ol>
+        <li>Esmaltação em gel</li>
+        <li>Alongamentos</li>
+        <li>Blindagem</li>
+      </ol>
+
+      <!-- Descrição do serviço Esmaltação em Gel -->
+      <section class="animar">
+        <div class="bloco-informativo2">
+          <img src="img/Captura.jpg" alt="gel" class="imagem-ajustada" />
+          <div class="texto-lateral">
+            <h2>Esmaltação em Gel</h2>
+            <p class="identado">A esmaltação em gel tem uma durabilidade que proporciona unhas lindas e perfeitas! Um esmalte comum costuma manter-se, no máximo, uma semana enquanto o esmalte em gel pode chegar de 15 dias a 20 dias. No caso do esmalte em gel, os componentes dele impedem a descamação durante as tarefas do dia a dia. Por isso, é ideal para pessoas que não tem muito tempo disponível para cuidar das unhas com frequência, mas não abrem mão de uma boa aparência.Além disso, a esmaltação em gel garante um brilho duradouro para as unhas. A durabilidade, esse tipo de esmaltação é recomendada para quem viaja com frequência ou pretende viajar por um período e quer manter as unhas lindas durante todo percurso.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Descrição do serviço Alongamento -->
+  <section class="animar">
+    <div class="bloco-informativo">
+      <img src="img/unhas.jpg" alt="Unhas em gel" class="imagem-ajustada" />
+      <div class="texto-lateral">
+        <h3>Alongamento de Unhas</h3>
+        <p class="justificado">O alongamento de unhas é uma forma de aumentar o comprimento e melhorar a aparência das unhas naturais, usando materiais que oferecem durabilidade e resistência.Sendo assim, esse “truque de beleza” é bastante popular, principalmente, entre quem tem unhas roídas, que quebram com muita facilidade ou que demoram para crescer. Além disso, é uma solução prática e rápida para melhorar a aparência das mãos em ocasiões especiais.Outra grande vantagem é a possibilidade de personalização. Afinal, você pode escolher o formato, o tamanho e o design que mais te agradarem e combinarem com seu estilo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Descrição do serviço Blindagem -->
+  <section class="animar">
+    <div class="bloco-informativo2">
+      <img src="img/blindagem.jpg" alt="Blindagem" class="imagem-ajustada" />
+      <div class="texto-lateral">
+        <h3>Blindagem</h3>
+        <p class="justificado">A Blindagem de Unhas, mantém no formato original das unhas. Sem modificar seu tamanho. São camadas de gel, que criam uma barreira protetora aumentando a durabilidade de unhas frágeis.Funciona como uma capa protetora, deixando as unhas mais resistentes, quebrando menos e com crescimento mais acelerado. Garante maior durabilidade da esmaltação. A blindagem dura em média de 15 a 20dias, podendo ser feita a cutícula semanalmente e esmaltado por cima. Quando retiramos a esmaltação comum a blindagem não sai junto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário para contato -->
+  <section id="contato">
+    <h2>Formulário de contato</h2>
+    <form class="form-contato" onsubmit="return enviarFormulario()">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </section>
+
+  <!-- Rodapé com redes sociais -->
+  <footer>
+    <p>© 2025 Suzy Nails. Todos os direitos reservados.</p>
+    <div style="margin-top: 10px;">
+      <a href="https://wa.me/5542999772898" target="_blank" class="social-icon">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.instagram.com/suzyaltenrath/" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5542999772898" class="whatsapp-float" target="_blank" title="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Script JS externo com funcionalidades gerais -->
+  <script src="script.js"></script>
+
+  <!-- Script embutido: anima entrada de seções com .animar ao rolar a tela -->
+  <script>
+    const elementos = document.querySelectorAll('.animar');
+
+    function mostrarElemento() {
+      const alturaTela = window.innerHeight;
+
+      elementos.forEach(el => {
+        const topo = el.getBoundingClientRect().top;
+        if (topo < alturaTela - 100) {
+          el.classList.add('visivel');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', mostrarElemento);
+    window.addEventListener('load', mostrarElemento);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+/* Reset e estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ajuda a manter o layout previsível */
+  scroll-behavior: smooth; /* Rolagem suave */
+  font-family: 'Segoe UI', sans-serif; /* Fonte padrão */
+}
+
+/* Estilo do corpo com imagem de fundo */
+body {
+  background-image: url('img/mao.jpg'); /* Imagem de fundo do site */
+  background-size: 110%; /* Ampliação leve da imagem */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 70px; /* Espaço para o cabeçalho fixo */
+}
+
+/* Estilo do cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+/* Estilo dos links do menu */
+nav a {
+  text-decoration: none;
+  color: #555;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d95f9a; /* Cor rosa ao passar o mouse */
+}
+
+/* Estilo geral das seções do site */
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 30px;
+  animation: fadeIn 0.8s ease; /* Entrada suave */
+}
+
+/* Estilo de títulos */
+h1, h2, h3 {
+  color: #d95f9a; /* Cor padrão para títulos */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Bloco com lista de serviços */
+.bloco-servicos {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.bloco-servicos h2 {
+  font-size: 2.5rem;
+  color: #d95f9a;
+  margin-bottom: 10px;
+}
+
+.bloco-servicos ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.bloco-servicos li {
+  margin-bottom: 8px;
+}
+
+.bloco-servicos p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Imagem responsiva com borda arredondada */
+.imagem-ajustada {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 20px 0;
+  transition: transform 0.3s;
+}
+
+.imagem-ajustada:hover {
+  transform: scale(1.02);
+}
+
+/* Lista com imagem ao lado (usada com display flex) */
+.lista-imagem {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+/* Campos do formulário de contato */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão de enviar */
+form input[type="submit"] {
+  background-color: #d95f9a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #b94c82;
+}
+
+/* Rodapé simples com texto centralizado */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px 0 0;
+  }
+
+  .lista-imagem {
+    flex-direction: column;
+  }
+
+  .perfil-container,
+  .bloco-informativo,
+  .bloco-informativo2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-lateral {
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .conteudo-abas-com-imagem {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-abas {
+    margin-top: 20px;
+  }
+
+  .galeria-unhas {
+    justify-content: center;
+  }
+}
+
+/* Links para WhatsApp e Instagram no rodapé */
+.social-icon {
+  color: #d95f9a;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icon i {
+  margin-right: 6px;
+}
+
+.social-icon:hover {
+  color: #b94c82; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5b;
+}
+
+.perfil-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.descricao-suzy {
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .perfil-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .descricao-suzy {
+    padding-top: 10px;
+  }
+}
+
+.identado {
+  text-indent: 2em;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.bloco-informativo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bloco-informativo img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.texto-lateral {
+  flex: 1;
+  min-width: 250px;
+}
+
+.justificado {
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .bloco-informativo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-lateral {
+    text-align: left;
+    padding: 0 10px;
+  }
+}
+
+.bloco-informativo2 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bloco-informativo2 img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .bloco-informativo2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-lateral {
+    text-align: left;
+    padding: 0 10px;
+  }
+}
+
+.animar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.checklist-unhas {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.checklist-unhas h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d95f9a;
+}
+
+.checklist-unhas ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.checklist-unhas li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+}
+
+.checklist-unhas i {
+  color: #d95f9a;
+  font-size: 1.3rem;
+}
+.cuidados-gel {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cuidados-gel h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d95f9a;
+}
+
+.cuidados-gel ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.cuidados-gel li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+}
+
+.cuidados-gel i {
+  color: #d95f9a;
+  font-size: 1.3rem;
+}
+
+.cuidados-alongamento {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cuidados-alongamento h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d95f9a;
+}
+
+.cuidados-alongamento ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.cuidados-alongamento li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+}
+
+.cuidados-alongamento i {
+  color: #d95f9a;
+  font-size: 1.3rem;
+}
+
+/* Abas interativas */
+
+.bloco-abas {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+
+.abas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.aba {
+  background-color: #f8f8f8;
+  color: #d95f9a;
+  border: 2px solid #d95f9a;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.aba.ativa {
+  background-color: #d95f9a;
+  color: #fff;
+}
+
+.painel-aba {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.painel-aba.ativa {
+  display: block;
+}
+
+.painel-aba ul {
+  list-style: none;
+  padding: 0;
+}
+
+.painel-aba li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.painel-aba i {
+  color: #d95f9a;
+  font-size: 1.3rem;
+}
+
+/* Animação em cascata dos itens li */
+
+.animar li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+/* Quando .visivel é ativada via JavaScript */
+.animar.visivel li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animar.visivel li:nth-child(1) { transition-delay: 0.1s; }
+.animar.visivel li:nth-child(2) { transition-delay: 0.2s; }
+.animar.visivel li:nth-child(3) { transition-delay: 0.3s; }
+.animar.visivel li:nth-child(4) { transition-delay: 0.4s; }
+.animar.visivel li:nth-child(5) { transition-delay: 0.5s; }
+.animar.visivel li:nth-child(6) { transition-delay: 0.6s; }
+.animar.visivel li:nth-child(7) { transition-delay: 0.7s; }
+.animar.visivel li:nth-child(8) { transition-delay: 0.8s; }
+.animar.visivel li:nth-child(9) { transition-delay: 0.9s; }
+.animar.visivel li:nth-child(10) { transition-delay: 1s; }
+.animar.visivel li:nth-child(11) { transition-delay: 1.1s; }
+
+.conteudo-abas-com-imagem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.texto-abas {
+  flex: 2;
+  min-width: 280px;
+}
+
+.imagem-abas {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+}
+
+.imagem-aba {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.imagem-aba.ativa {
+  display: block;
+}
+
+/* Estrutura da aba com imagem e texto lado a lado */
+
+.imagem-aba.ativa {
+  display: block;
+}
+
+/* Galeria horizontal */
+.galeria-unhas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.galeria-unhas img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.galeria-unhas img:hover {
+  transform: scale(1.03);
+}
+
+/* Galeria em grade (portfólio.html) */
+.grade-portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.grade-portfolio img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.grade-portfolio img:hover {
+  transform: scale(1.03);
+}

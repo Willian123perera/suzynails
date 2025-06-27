@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formatos de Unha | Suzy Nails Designer</title>
+
+  <!-- Link para o seu arquivo de estilos principal -->
+  <link rel="stylesheet" href="estilo.css" />
+
+  <!-- Fonte de ícones (ex: Font Awesome para WhatsApp e Instagram) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cabeçalho fixo no topo com logo e links de navegação -->
+  <header>
+    <div><strong>Suzy Nails</strong></div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="dicas.html">Dicas de cuidados</a>
+      <a href="formatos.html" class="ativa">Formatos</a> <!-- Página atual -->
+      <a href="portfolio.html">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Título de introdução da página -->
+  <section id="inicio">
+    <h1>Conheça os formatos de unha e escolha o seu estilo</h1>
+  </section>
+
+  <!-- Bloco com uma imagem lateral e texto explicativo -->
+  <section id="sobre" class="perfil">
+    <div class="perfil-container">
+      <!-- Imagem lateral -->
+      <img src="img/sorri.jpg" alt="Formatos de unha" class="imagem-ajustada">
+      
+      <!-- Descrição com parágrafo indentado -->
+      <div class="descricao-suzy">
+        <p class="identado">
+          Cada formato de unha transmite uma personalidade única — do ousado ao clássico, do elegante ao delicado. Explore abaixo os quatro estilos mais desejados e veja qual combina mais com o seu estilo!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção com abas para escolher entre diferentes formatos de unha -->
+  <section class="bloco-abas animar">
+    <h2>Formatos de Unhas</h2>
+
+    <!-- Botões das abas -->
+    <div class="abas">
+      <button class="aba ativa" data-alvo="#stiletto">Stiletto</button>
+      <button class="aba" data-alvo="#ballerina">Ballerina</button>
+      <button class="aba" data-alvo="#almond">Almond</button>
+      <button class="aba" data-alvo="#quadrada">Quadrada</button>
+    </div>
+
+    <!-- Conteúdo associado às abas (texto + galeria de imagens) -->
+    <div class="conteudo-abas-com-imagem">
+      <div class="texto-abas">
+
+        <!-- Aba 1 - Stiletto (ativa por padrão) -->
+        <div class="painel-aba ativa" id="stiletto">
+          <p>O formato stiletto é ousado, longo e com ponta fina. Para quem ama atitude e destaque!</p>
+          <div class="galeria-unhas">
+            <img src="img/stiletto1.jpg" alt="Unha Stiletto 1">
+            <img src="img/stiletto2.jpg" alt="Unha Stiletto 2">
+            <img src="img/stiletto3.jpg" alt="Unha Stiletto 3">
+            <img src="img/stiletto4.jpg" alt="Unha Stiletto 4">
+          </div>
+        </div>
+
+        <!-- Aba 2 - Ballerina -->
+        <div class="painel-aba" id="ballerina">
+          <p>O formato ballerina tem laterais retas e ponta achatada, como uma sapatilha. Sofisticado e moderno.</p>
+          <div class="galeria-unhas">
+            <img src="img/ballerina1.jpg" alt="Unha Ballerina 1">
+            <img src="img/ballerina2.jpg" alt="Unha Ballerina 2">
+            <img src="img/ballerina3.jpg" alt="Unha Ballerina 3">
+            <img src="img/ballerina4.jpg" alt="Unha Ballerina 4">
+          </div>
+        </div>
+
+        <!-- Aba 3 - Almond -->
+        <div class="painel-aba" id="almond">
+          <p>O formato almond (amendoado) é ovalado com ponta suave. Feminino e elegante, alonga os dedos.</p>
+          <div class="galeria-unhas">
+            <img src="img/almond1.jpg" alt="Unha Almond 1">
+            <img src="img/almond2.jpg" alt="Unha Almond 2">
+            <img src="img/almond3.jpg" alt="Unha Almond 3">
+            <img src="img/almond4.jpg" alt="Unha Almond 4">
+          </div>
+        </div>
+
+        <!-- Aba 4 - Quadrada -->
+        <div class="painel-aba" id="quadrada">
+          <p>Tradicional e versátil, o formato quadrado combina com unhas naturais e alongamentos mais robustos.</p>
+          <div class="galeria-unhas">
+            <img src="img/quadrada1.jpg" alt="Unha Quadrada 1">
+            <img src="img/quadrada2.jpg" alt="Unha Quadrada 2">
+            <img src="img/quadrada3.jpg" alt="Unha Quadrada 3">
+            <img src="img/quadrada4.jpg" alt="Unha Quadrada 4">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção com formulário de contato -->
+  <section id="contato">
+    <h2>Formulário de contato</h2>
+    <form class="form-contato" onsubmit="return enviarFormulario()">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </section>
+
+  <!-- Rodapé com redes sociais -->
+  <footer>
+    <p>© 2025 Suzy Nails. Todos os direitos reservados.</p>
+    <div style="margin-top: 10px;">
+      <!-- Botão WhatsApp -->
+      <a href="https://wa.me/5542999772898" target="_blank" class="social-icon">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <!-- Botão Instagram -->
+      <a href="https://www.instagram.com/suzyaltenrath/" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script externo com funcionalidades do site -->
+  <script src="script.js"></script>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5542999772898" class="whatsapp-float" target="_blank" title="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Script embutido para animar elementos ao rolar a página -->
+  <script>
+    const elementos = document.querySelectorAll('.animar');
+
+    function mostrarElemento() {
+      const alturaTela = window.innerHeight;
+
+      elementos.forEach(el => {
+        const topo = el.getBoundingClientRect().top;
+        if (topo < alturaTela - 100) {
+          el.classList.add('visivel');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', mostrarElemento);
+    window.addEventListener('load', mostrarElemento);
+  </script>
+
+</body>
+</html>
